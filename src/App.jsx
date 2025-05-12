@@ -20,6 +20,7 @@ export const App = () => {
   const [selectedGoodIndex, setSelectedGoodIndex] = useState(8);
 
   function clearSelection() {
+    setSelectedGoodIndex(null);
     setProduct(null);
   }
 
@@ -72,8 +73,6 @@ export const App = () => {
                       type="button"
                       className="button is-info"
                       onClick={() => {
-                        setProduct(null);
-                        setSelectedGoodIndex(null);
                         clearSelection();
                       }}
                     >
